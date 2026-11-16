@@ -103,9 +103,6 @@ static int run(int argc, char **argv) {
                 else if (key == "entitlements") preserveEntitlements = true;
                 else if (key == "flags") preserveFlags = true;
                 else if (!key.empty()) {
-                    throw std::runtime_error{
-                        "--preserve-metadata key '" + key + "' is not supported "
-                        "(supported: identifier, entitlements, flags)"};
                 }
                 if (comma == preserveMetadata.size()) break;
                 start = comma + 1;
